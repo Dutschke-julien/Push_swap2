@@ -15,9 +15,13 @@ class LinkedList
     ~LinkedList();
 
     void add_back(T data);
+    int size();
     Node<T>* findSmallest();
     Node<T>* findLargest();
     void add_front(T data);
+    void pop_front();
+    void pop_back();
+    void remove(Node<T>* node);
     void print();
 
     class Iterator
@@ -43,6 +47,7 @@ class LinkedList
     };
         Iterator begin();
         Iterator end();
+        void remove(Iterator it);
 };
 
 

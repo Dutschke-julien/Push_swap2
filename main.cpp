@@ -32,7 +32,6 @@ int main(int ac, char **av)
     PushSwap ps;
     if (check_error(ac, av, ps))
         return (1);
-    ps.print();
     return (0);
 }
 

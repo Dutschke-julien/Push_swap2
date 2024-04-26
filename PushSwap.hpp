@@ -6,6 +6,9 @@
 
 #include "LinkedList/LinkedList.hpp"
 
+
+// ! PA PB RA RB RRA RRB RRR
+
 class PushSwap
 {
     public:
@@ -13,9 +16,14 @@ class PushSwap
         ~PushSwap();
         void print();
 
-        
+
         LinkedList<int> _stackA;
         LinkedList<int> _stackB;
+
+
+        //methods
+        void pa();
+        void pb();
 };
 
 

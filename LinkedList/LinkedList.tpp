@@ -1,5 +1,52 @@
 #include "LinkedList.hpp"
 
+template <typename T>
+void LinkedList<T>::remove(typename LinkedList<T>::Iterator it)
+{
+    remove(*it);
+}
+
+template <typename T>
+void LinkedList<T>::remove(Node<T>* node)
+{
+    Iterator it = begin();
+    for (; it != NULL; ++it)
+    {
+        if (*it == node)
+        {
+            if (node->prev != nullptr)
+                node->prev->next = node->next;
+            if (node->next != nullptr)
+                node->next->prev = node->prev;
+            delete node;
+            return;
+        }
+    }
+}
+
+
+
+template <typename T>
+void LinkedList<T>::pop_front()
+{
+    if (head != nullptr)
+    {
+        Node<T>* temp = head;
+        head = head->next;
+        delete temp;
+    }
+}
+
+template <typename T>
+void LinkedList<T>::pop_back()
+{
+    if (tail != nullptr)
+    {
+        Node<T>* temp = tail;
+        tail = tail->prev;
+        delete temp;
+    }
+}
 
 
 template <typename T>
@@ -86,4 +133,16 @@ void LinkedList<T>::print()
         std::cout << "["<< *it << "] ";
     }
     std::cout << " <- Tail" << std::endl;
+}
+
+template <typename T>
+int LinkedList<T>::size()
+{
+    int count = 0;
+    Iterator it = begin();
+    for (; it != NULL; ++it)
+    {
+        count++;
+    }
+    return count;
 }

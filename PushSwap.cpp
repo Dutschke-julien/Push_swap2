@@ -13,3 +13,8 @@ void PushSwap::print()
     _stackA.print();
     _stackB.print();
 }
+
+
+void PushSwap::pa()
+{
+}
