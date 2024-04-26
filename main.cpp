@@ -1,6 +1,6 @@
-#include "PushSwap.hpp"
+#include "Push_swap.hpp"
 
-int check_error(int ac, char **av, PushSwap ps)
+int check_error(int ac, char **av)
 {
     std::stringstream ss;
 
@@ -17,7 +17,6 @@ int check_error(int ac, char **av, PushSwap ps)
                 std::cout << "Error: Invalid argument" << std::endl;
                 return (1);
             }
-            ps.add_node_front(n, (Node**)(ps.get_stackA()));
             ss.clear();
         }
     }
@@ -28,11 +27,8 @@ int check_error(int ac, char **av, PushSwap ps)
 
 int main(int ac, char **av)
 {
-    PushSwap ps;
- 
-    if (check_error(ac, av, ps))
+    if (check_error(ac, av))
         return (1);
-    ps.print_node();
     return (0);
 }
 
