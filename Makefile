@@ -4,25 +4,27 @@ CXX = c++
 
 CXXFLAGS = -g3
 
-SRC = main.cpp\
-	  PushSwap.cpp\
-	  PushSwapIterator.cpp
+SRCTEMPLATE = LinkedList/Iterator.cpp
+
+SRC = PushSwap.cpp\
+	  main.cpp
+
+
 
 OBJ = $(SRC:.cpp=.o)
 
+OBJTEMPLATE  = $(SRCTEMPLATE:.cpp=.o)
+
+
+
 all: $(NAME)
 
-compile:
-	$(CXX) $(CXXFLAGS)  $(SRC) -o $(NAME)
 
-
-
-
-$(NAME): $(OBJ)
-	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJ)
+$(NAME): $(OBJTEMPLATE) $(OBJ)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJTEMPLATE) $(OBJ)
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(OBJTEMPLATE)
 
 fclean: clean
 	rm -f $(NAME)

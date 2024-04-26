@@ -1,5 +1,7 @@
 #include "LinkedList.hpp"
 
+
+
 template <typename T>
 Node<T>* LinkedList<T>::findSmallest()
 { 
@@ -58,7 +60,7 @@ void LinkedList<T>::add_front(T data)
 }
 
 template <typename T>
-void add_back(T data)
+void LinkedList<T>::add_back(T data)
 {
     Node<int>* newNode = new Node<int>(data);
 

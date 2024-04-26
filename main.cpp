@@ -1,4 +1,4 @@
-#include "Push_swap.hpp"
+#include "PushSwap.hpp"
 
 int check_error(int ac, char **av)
 {

@@ -2,6 +2,13 @@
 
 
 template <typename T>
+std::ostream& LinkedList<T>::Iterator::operator<<(std::ostream& os)
+{
+    os << pointer->_data;
+    return os;
+}
+
+template <typename T>
 LinkedList<T>::Iterator::Iterator(Node<T>* ptr) : pointer(ptr) {}
 
 template <typename T>

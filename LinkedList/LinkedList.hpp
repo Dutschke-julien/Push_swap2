@@ -2,6 +2,7 @@
 # define __LINKEDLIST_HPP__
 
 #include "Node.hpp"
+#include <iostream>
 
 template<typename T>
 
@@ -20,6 +21,7 @@ class LinkedList
     Node<T>* findSmallest();
     Node<T>* findLargest();
     void add_front(T data);
+    void print();
 
     class Iterator
     {
@@ -27,15 +29,18 @@ class LinkedList
             Node<T>* pointer;
 
         public:
+            std::ostream& operator<<(std::ostream& os);
             Iterator(Node<T>* ptr);
             Iterator& operator++();
             Iterator& operator--();
             Node<T>* operator*();
+
             bool operator!=(const Iterator& other);
     };
         Iterator begin();
         Iterator end();
 };
+#include "LinkedList.tpp"
 
 
 #endif
