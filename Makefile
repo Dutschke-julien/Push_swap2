@@ -4,8 +4,6 @@ CXX = c++
 
 CXXFLAGS = -g3
 
-SRCTEMPLATE = LinkedList/Iterator.cpp
-
 SRC = PushSwap.cpp\
 	  main.cpp
 
@@ -13,7 +11,6 @@ SRC = PushSwap.cpp\
 
 OBJ = $(SRC:.cpp=.o)
 
-OBJTEMPLATE  = $(SRCTEMPLATE:.cpp=.o)
 
 
 
@@ -21,7 +18,7 @@ all: $(NAME)
 
 
 $(NAME): $(OBJTEMPLATE) $(OBJ)
-	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJTEMPLATE) $(OBJ)
+	$(CXX) $(CXXFLAGS) -o $(NAME)  $(OBJ)
 
 clean:
 	rm -f $(OBJ) $(OBJTEMPLATE)

@@ -5,9 +5,6 @@
 #include <iostream>
 
 template<typename T>
-
-
-
 class LinkedList 
 {
     public:
@@ -29,19 +26,28 @@ class LinkedList
             Node<T>* pointer;
 
         public:
-            std::ostream& operator<<(std::ostream& os);
             Iterator(Node<T>* ptr);
             Iterator& operator++();
             Iterator& operator--();
             Node<T>* operator*();
-
             bool operator!=(const Iterator& other);
+            friend std::ostream& operator<<(std::ostream& os, const typename LinkedList<T>::Iterator& it)
+            {
+            if (it.pointer)
+                os << *(it.pointer);
+            else
+                os << "null";
+            return os;
+          }
+
     };
         Iterator begin();
         Iterator end();
 };
-#include "LinkedList.tpp"
 
+
+#include "LinkedList.tpp"
+#include "Iterator.tpp"
 
 #endif
 

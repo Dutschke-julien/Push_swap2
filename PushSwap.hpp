@@ -8,13 +8,14 @@
 
 class PushSwap
 {
-    private:
-    LinkedList<int> _stackA;
-    LinkedList<int> _stackB;
-
     public:
         PushSwap();
         ~PushSwap();
+        void print();
+
+        
+        LinkedList<int> _stackA;
+        LinkedList<int> _stackB;
 };
 
 

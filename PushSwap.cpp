@@ -1,12 +1,15 @@
 #include "PushSwap.hpp"
 
-
 PushSwap::PushSwap()
 {
-    std::cout << "PushSwap created" << std::endl;
 }
 
 PushSwap::~PushSwap()
 {
-    std::cout << "PushSwap destroyed" << std::endl;
+}
+
+void PushSwap::print()
+{
+    _stackA.print();
+    _stackB.print();
 }

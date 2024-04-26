@@ -1,6 +1,6 @@
 #include "PushSwap.hpp"
 
-int check_error(int ac, char **av)
+int check_error(int ac, char **av, PushSwap &ps)
 {
     std::stringstream ss;
 
@@ -12,11 +12,13 @@ int check_error(int ac, char **av)
 
             int n;
             ss >> n;
+
             if (ss.fail() || !ss.eof())
             {
                 std::cout << "Error: Invalid argument" << std::endl;
                 return (1);
             }
+            ps._stackA.add_back(n);
             ss.clear();
         }
     }
@@ -27,8 +29,10 @@ int check_error(int ac, char **av)
 
 int main(int ac, char **av)
 {
-    if (check_error(ac, av))
+    PushSwap ps;
+    if (check_error(ac, av, ps))
         return (1);
+    ps.print();
     return (0);
 }
 

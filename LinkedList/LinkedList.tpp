@@ -32,13 +32,11 @@ Node<T>* LinkedList<T>::findLargest()
 template <typename T>
 LinkedList<T>::LinkedList() : head(nullptr), tail(nullptr) 
 {
-    std::cout << "LinkedList created" << std::endl;
 }
 
 template <typename T>
 LinkedList<T>::~LinkedList() 
 {
-    std::cout << "LinkedList destroyed" << std::endl;
 }
 
 template <typename T>
@@ -76,4 +74,16 @@ void LinkedList<T>::add_back(T data)
         head = newNode;
         tail = newNode;
     }
+}
+
+template <typename T>
+void LinkedList<T>::print()
+{
+    Iterator it = begin();
+    std::cout << "Head -> ";
+    for (; it != NULL; ++it)
+    {
+        std::cout << "["<< *it << "] ";
+    }
+    std::cout << " <- Tail" << std::endl;
 }
