@@ -18,7 +18,7 @@ int check_error(int ac, char **av, PushSwap &ps)
                 std::cout << "Error: Invalid argument" << std::endl;
                 return (1);
             }
-            ps._stackA.add_back(n);
+            ps.stack_a.push_back(n);
             ss.clear();
         }
     }

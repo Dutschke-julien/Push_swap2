@@ -3,21 +3,17 @@
 
 #include <iostream>
 #include <sstream>
-
-#include "LinkedList/LinkedList.hpp"
+#include <deque>
 
 
 // ! PA PB RA RB RRA RRB RRR
 
+
 class PushSwap
 {
-    private:
-        LinkedList<int> stackA;
-        LinkedList<int> stackB;
-
     public:
-        PushSwap();
-        ~PushSwap();
+    PushSwap();
+    ~PushSwap();
 
     //methods
     void print();
@@ -27,11 +23,13 @@ class PushSwap
 
     void ra();
     void rb();
-    
+
     void rra();
     void rrb();
     void rrr();
 
+    std::deque<int> stack_a;
+    std::deque<int> stack_b;
 
 };
 
