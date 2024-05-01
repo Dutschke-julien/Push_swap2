@@ -1,5 +1,7 @@
 #include "PushSwap.hpp"
 
+
+
 int check_error(int ac, char **av, PushSwap &ps)
 {
     std::stringstream ss;
@@ -26,12 +28,18 @@ int check_error(int ac, char **av, PushSwap &ps)
 }
 
 
-
 int main(int ac, char **av)
 {
     PushSwap ps;
     if (check_error(ac, av, ps))
         return (1);
+    if (ps.is_sorted())
+        return (0);
+    //ps.insert();
+    //ps.funSort();
+    //ps.shakerSort();
+    //ps.bubbleSort();
+    quickSort(ps, 0, ps.stack_a.size() - 1);
     return (0);
 }
 
