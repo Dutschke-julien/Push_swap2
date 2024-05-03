@@ -5,6 +5,13 @@ CXX = c++
 CXXFLAGS = -g3
 
 SRC = PushSwap.cpp\
+	  utilsA.cpp\
+	  utilsB.cpp\
+	  instructions.cpp\
+	  insertSort.cpp\
+	  BubleSort.cpp\
+	  FunSort.cpp\
+	  QuickSort.cpp\
 	  main.cpp
 
 

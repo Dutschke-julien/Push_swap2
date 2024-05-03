@@ -1,5 +1,5 @@
 #include "PushSwap.hpp"
-
+#include <cmath>
 
 
 int check_error(int ac, char **av, PushSwap &ps)
@@ -27,19 +27,15 @@ int check_error(int ac, char **av, PushSwap &ps)
     return (0);
 }
 
-
 int main(int ac, char **av)
 {
     PushSwap ps;
     if (check_error(ac, av, ps))
         return (1);
     if (ps.is_sorted())
-        return (0);
+        return (0); 
     //ps.insert();
-    //ps.funSort();
-    //ps.shakerSort();
-    //ps.bubbleSort();
-    quickSort(ps, 0, ps.stack_a.size() - 1);
+    ps.quickSort(10);
     return (0);
 }
 
