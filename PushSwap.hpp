@@ -67,6 +67,7 @@ class PushSwap
     void funSort();
     void bubbleSort();
     void quickSort(int groupcount);
+    void turcMethodSort();
     //end sort
 };
 

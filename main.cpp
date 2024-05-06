@@ -35,7 +35,8 @@ int main(int ac, char **av)
     if (ps.is_sorted())
         return (0); 
     //ps.insert();
-    ps.quickSort(10);
+    //ps.quickSort(6);
+    //ps.turcMethodSort();
     return (0);
 }
 

@@ -12,6 +12,7 @@ SRC = PushSwap.cpp\
 	  BubleSort.cpp\
 	  FunSort.cpp\
 	  QuickSort.cpp\
+	  turcMethodSort.cpp\
 	  main.cpp
 
 
